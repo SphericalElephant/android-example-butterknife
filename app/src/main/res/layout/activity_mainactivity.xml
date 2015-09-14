@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/activity_mainactivity_b_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_mainactivity_test"/>
+
+    <TextView
+        android:id="@+id/activity_mainactivity_tv_mightnotbehere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_mainactivity_b_test"
+        android:text="@string/activity_mainactivity_mightnotbehere"/>
+
+    <ImageView
+        android:id="@+id/activity_mainactivity_iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_mainactivity_ll_buttoncontainer"
+        android:layout_below="@+id/activity_mainactivity_tv_mightnotbehere"
+        android:layout_margin="50dip"/>
+
+    <LinearLayout
+        android:id="@+id/activity_mainactivity_ll_buttoncontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/activity_mainactivity_b_hide"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/activity_mainactivity_hide"/>
+
+        <Button
+            android:id="@+id/activity_mainactivity_b_show"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/activity_mainactivity_show"/>
+    </LinearLayout>
+
+</RelativeLayout>

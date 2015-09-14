@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ButterKnife Example</string>
+    <string name="activity_mainactivity_test">Test</string>
+    <string name="activity_mainactivity_testpressed">You Pressed Test!</string>
+    <string name="activity_mainactivity_mightnotbehere">This Textfield might not be here</string>
+    <string name="activity_mainactivity_hide">Hide</string>
+    <string name="activity_mainactivity_show">Show</string>
+</resources>
