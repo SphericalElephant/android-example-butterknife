@@ -1,4 +1,4 @@
-package butterknife.example.sphericalelephant.com.myapplication;
+package com.sphericalelephant.example.butterknife;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.0"
 
     defaultConfig {
-        applicationId "butterknife.example.sphericalelephant.com.myapplication"
+        applicationId "com.sphericalelephant.example.butterknife"
         minSdkVersion 22
         targetSdkVersion 23
         versionCode 1

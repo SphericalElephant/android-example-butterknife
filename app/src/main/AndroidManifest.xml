@@ -1,5 +1,5 @@
 <manifest
-    package="butterknife.example.sphericalelephant.com.myapplication"
+    package="com.sphericalelephant.example.butterknife"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application

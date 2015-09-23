@@ -1,4 +1,4 @@
-package butterknife.example.sphericalelephant.com.myapplication.activity;
+package com.sphericalelephant.example.butterknife.activity;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -10,13 +10,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sphericalelephant.example.butterknife.R;
+
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.BindDrawable;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.example.sphericalelephant.com.myapplication.R;
+
 
 /**
  * This is an example illustrating the use of ButterKnife, a very simple dependency injection (view injection) framework for android.
