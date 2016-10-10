@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.sphericalelephant.example.butterknife"
-        minSdkVersion 22
+        minSdkVersion 24
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -19,6 +19,7 @@ android {
     }
 }
 
+// we need this plugin to allow 'apt' dependencies
 apply plugin: 'android-apt'
 
 dependencies {
