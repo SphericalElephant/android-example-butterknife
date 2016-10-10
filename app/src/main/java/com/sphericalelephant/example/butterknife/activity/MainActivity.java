@@ -14,10 +14,12 @@ import com.sphericalelephant.example.butterknife.R;
 
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.BindDrawable;
+import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 
 /**
@@ -36,17 +38,17 @@ public class MainActivity extends AppCompatActivity {
 	 * <p/>
 	 * after setContentView(...)
 	 */
-	@Bind(R.id.activity_mainactivity_b_test)
+	@BindView(R.id.activity_mainactivity_b_test)
 	Button testButton;
 
 	/**
 	 * Similar to the above binding, but is more fault tolerant: if the view cannot be found, no exception will be thrown
 	 */
 	@Nullable
-	@Bind(R.id.activity_mainactivity_tv_mightnotbehere)
+	@BindView(R.id.activity_mainactivity_tv_mightnotbehere)
 	TextView textView;
 
-	@Bind(R.id.activity_mainactivity_iv_image)
+	@BindView(R.id.activity_mainactivity_iv_image)
 	ImageView image;
 
 	/**
@@ -58,13 +60,15 @@ public class MainActivity extends AppCompatActivity {
 	/**
 	 * You can also use bind to bind views to lists and arrays
 	 */
-	@Bind({R.id.activity_mainactivity_b_test, R.id.activity_mainactivity_iv_image, R.id.activity_mainactivity_tv_mightnotbehere})
+	@BindViews({R.id.activity_mainactivity_b_test, R.id.activity_mainactivity_iv_image, R.id.activity_mainactivity_tv_mightnotbehere})
 	List<View> viewsToHideOrShow;
 
 	/**
 	 * As a point of reference, these two buttons are bound without using ButterKnife
 	 */
 	private Button hide, show;
+
+	private Unbinder unbinder;
 
 	private ButterKnife.Action hideAction = new ButterKnife.Action() {
 		@Override
@@ -109,14 +113,14 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		ButterKnife.bind(this); // takes a view as second parameter to allow binding to arbitrary views (uses view as parent)
+		unbinder = ButterKnife.bind(this); // takes a view as second parameter to allow binding to arbitrary views (uses view as parent)
 		image.setImageDrawable(sphericalElephantLogo);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		ButterKnife.unbind(this); // unbind!
+		unbinder.unbind(); // unbind! Actually: only required in fragments (onDestroyView)
 	}
 
 	/**
